@@ -1,0 +1,4 @@
+[mcp_servers.chrome-devtools]
+command = "pnpm"
+args = ["exec", "chrome-devtools-mcp", "--autoConnect"]
+cwd = "/Users/zhouyanli/Documents/workspace-2026/fake-wechat"
