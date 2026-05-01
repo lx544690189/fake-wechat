@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import type { CSSProperties, MouseEventHandler } from 'react'
 import Avatar from '../../../../components/Avatar'
+import Icon from '../../../../components/Icon'
 import ToolbarButton from '../../../../components/ToolbarButton'
 import type { Conversation } from '../../../../stores/wechat'
 import styles from './index.module.less'
@@ -57,8 +58,8 @@ function ConversationList({
               <span className={styles.previewRow}>
                 {conversation.mention && <span className={styles.mention}>{conversation.mention}</span>}
                 <span className={styles.preview}>{conversation.preview}</span>
-                {conversation.marker === 'bubble' && <span className={styles.tinyBubble} />}
-                {conversation.muted && <span className={styles.mutedIcon} />}
+                {conversation.marker === 'bubble' && <Icon className={styles.tinyBubble} name="miniBubble" />}
+                {conversation.muted && <Icon className={styles.mutedIcon} name="bellOff" />}
               </span>
             </span>
           </button>

@@ -1,9 +1,11 @@
 import classNames from 'classnames'
-import type { SidebarIcon } from '../../stores/wechat'
+import Icon, { type IconName } from '../Icon'
 import styles from './index.module.less'
 
+type ToolbarIconName = Exclude<IconName, 'bellOff' | 'miniBubble'>
+
 type ToolbarButtonProps = {
-  icon: SidebarIcon | 'search' | 'plus' | 'smile' | 'folder' | 'scissors' | 'mic' | 'phoneCall' | 'video' | 'more' | 'chevron'
+  icon: ToolbarIconName
   label: string
   active?: boolean
   badge?: number
@@ -24,7 +26,7 @@ function ToolbarButton({ icon, label, active, badge, muted, onClick }: ToolbarBu
       type="button"
       onClick={onClick}
     >
-      <span className={styles.symbol} />
+      <Icon className={styles.symbol} name={icon} />
       {Boolean(badge) && <span className={styles.badge}>{badge}</span>}
     </button>
   )
