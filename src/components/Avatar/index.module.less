@@ -1,0 +1,246 @@
+.avatar {
+  --avatar-size: 46px;
+
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 var(--avatar-size);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  overflow: visible;
+  place-items: center;
+  border-radius: 4px;
+  background: #d8d8d8;
+}
+
+.inner {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.inner::before,
+.inner::after {
+  position: absolute;
+  content: '';
+}
+
+.sunset {
+  background:
+    linear-gradient(160deg, rgba(30, 40, 58, 0) 42%, #242b38 43% 47%, rgba(30, 40, 58, 0) 48%),
+    linear-gradient(24deg, #1b2532 0 25%, #f0a73a 26% 35%, #6d88a6 36% 62%, #20324b 63% 100%);
+
+  .inner::before {
+    right: 6px;
+    bottom: 5px;
+    width: 10px;
+    height: 18px;
+    border-radius: 999px 999px 2px 2px;
+    background: #16191f;
+  }
+}
+
+.aunt {
+  background:
+    radial-gradient(circle at 28% 36%, #7d83d8 0 10%, transparent 11%),
+    radial-gradient(circle at 68% 36%, #293662 0 10%, transparent 11%),
+    linear-gradient(135deg, #bcb9ff 0 32%, #e3c1ff 33% 58%, #8f9ee9 59% 100%);
+
+  .inner::before {
+    left: 5px;
+    bottom: -3px;
+    width: 24px;
+    height: 34px;
+    border-radius: 15px 15px 4px 4px;
+    background: linear-gradient(155deg, #6c6fd5, #e8ccff);
+  }
+
+  .inner::after {
+    right: 5px;
+    bottom: -3px;
+    width: 21px;
+    height: 32px;
+    border-radius: 14px 14px 4px 4px;
+    background: linear-gradient(150deg, #26376f, #a9b0ff);
+  }
+}
+
+.file {
+  background: #08c160;
+
+  .inner::before {
+    left: 12px;
+    top: 15px;
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+
+  .inner::after {
+    left: 22px;
+    top: 20px;
+    border: 4px solid transparent;
+    border-left-color: #08c160;
+  }
+}
+
+.service {
+  background: #ff5b47;
+
+  .inner::before {
+    left: 10px;
+    top: 10px;
+    width: 16px;
+    height: 22px;
+    border-radius: 2px;
+    background: #ffffff;
+    box-shadow: 14px 0 0 #ffffff;
+  }
+
+  .inner::after {
+    left: 14px;
+    top: 13px;
+    width: 7px;
+    height: 5px;
+    border: 2px solid #ff5b47;
+    border-top: 0;
+    border-radius: 0 0 7px 7px;
+  }
+}
+
+.groupBlue,
+.groupWarm {
+  background: #ffffff;
+
+  .inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 2px;
+    background: #ffffff;
+  }
+
+  .inner::before {
+    position: static;
+    display: block;
+    content: '';
+    background:
+      linear-gradient(90deg, #d8efff 0 30%, #263142 31% 60%, #d16b51 61%),
+      linear-gradient(90deg, #f8d8a8 0 30%, #477aca 31% 60%, #9bd190 61%);
+    box-shadow:
+      14px 0 0 #b5d6ff,
+      28px 0 0 #f6d072,
+      0 14px 0 #466f8f,
+      14px 14px 0 #ffe6bb,
+      28px 14px 0 #6783bb,
+      0 28px 0 #894139,
+      14px 28px 0 #d2ecdc,
+      28px 28px 0 #efc3d1;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.groupWarm {
+  .inner::before {
+    background: linear-gradient(135deg, #f3d46e, #8bc5a6);
+  }
+}
+
+.public {
+  background: #1e87f0;
+
+  .inner::before {
+    left: 14px;
+    top: 10px;
+    width: 15px;
+    height: 25px;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+
+  .inner::after {
+    left: 19px;
+    top: 15px;
+    width: 9px;
+    height: 2px;
+    background: #1e87f0;
+    box-shadow:
+      0 6px 0 #1e87f0,
+      0 12px 0 #1e87f0;
+  }
+}
+
+.pay {
+  background: #08c160;
+
+  .inner::before {
+    left: 9px;
+    top: 13px;
+    width: 25px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+
+  .inner::after {
+    left: 27px;
+    top: 25px;
+    width: 8px;
+    height: 7px;
+    border-radius: 0 0 8px;
+    background: #ffffff;
+  }
+}
+
+.orange {
+  background: #f7f7f7;
+
+  .inner::before {
+    left: 10px;
+    top: 14px;
+    width: 24px;
+    height: 18px;
+    border-radius: 14px;
+    background: #ffa633;
+  }
+
+  .inner::after {
+    right: 9px;
+    bottom: 11px;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: #ffa633;
+  }
+}
+
+.badge,
+.dot {
+  position: absolute;
+  z-index: 2;
+  border-radius: 999px;
+  background: #fa5151;
+}
+
+.badge {
+  top: -8px;
+  right: -9px;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+.dot {
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+}

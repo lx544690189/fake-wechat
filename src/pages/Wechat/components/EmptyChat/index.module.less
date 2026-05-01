@@ -1,0 +1,74 @@
+.empty {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  place-items: center;
+  background: #ededed;
+}
+
+.logo {
+  position: relative;
+  width: 105px;
+  height: 73px;
+  margin: -23px 0 0 30px;
+  opacity: 0.92;
+}
+
+.logoBack,
+.logoFront {
+  position: absolute;
+  border-radius: 50%;
+  background: #d6d6d6;
+}
+
+.logoBack {
+  left: 0;
+  top: 0;
+  width: 74px;
+  height: 58px;
+}
+
+.logoBack::before,
+.logoBack::after,
+.logoFront::before,
+.logoFront::after {
+  position: absolute;
+  border-radius: 50%;
+  background: #ededed;
+  content: '';
+}
+
+.logoBack::before {
+  left: 21px;
+  top: 19px;
+  width: 10px;
+  height: 10px;
+}
+
+.logoBack::after {
+  right: 20px;
+  top: 19px;
+  width: 10px;
+  height: 10px;
+}
+
+.logoFront {
+  right: 0;
+  bottom: 0;
+  width: 65px;
+  height: 52px;
+}
+
+.logoFront::before {
+  left: 19px;
+  top: 16px;
+  width: 8px;
+  height: 8px;
+}
+
+.logoFront::after {
+  right: 18px;
+  top: 16px;
+  width: 8px;
+  height: 8px;
+}

@@ -1,0 +1,268 @@
+.chat {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  background: #ededed;
+}
+
+.header {
+  display: flex;
+  height: 84px;
+  flex: 0 0 84px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 22px;
+}
+
+.header h1 {
+  margin: -2px 0 0;
+  color: #101010;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #111111;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 26px;
+  overflow: hidden;
+  padding: 0 29px 22px 26px;
+}
+
+.scrollbar {
+  position: absolute;
+  z-index: 2;
+  top: 84px;
+  right: 6px;
+  width: 10px;
+  height: 90px;
+  border-radius: 999px;
+  background: #9c9c9c;
+}
+
+.time {
+  align-self: center;
+  margin-top: 6px;
+  color: #9a9a9a;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.message:first-child {
+  margin-top: 0;
+}
+
+.mine {
+  justify-content: flex-end;
+  padding-left: 360px;
+}
+
+.theirs {
+  justify-content: flex-start;
+  padding-right: 360px;
+}
+
+.bubbleWrap {
+  display: flex;
+  min-width: 0;
+}
+
+.textBubble {
+  position: relative;
+  display: block;
+  max-width: min(520px, 100%);
+  min-height: 48px;
+  padding: 0 17px;
+  border-radius: 4px;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+.theirs .textBubble {
+  background: #ffffff;
+}
+
+.mine .textBubble {
+  background: #95ec69;
+}
+
+.textBubble::after {
+  position: absolute;
+  top: 17px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+}
+
+.theirs .textBubble::after {
+  left: -11px;
+  border-right-color: #ffffff;
+}
+
+.mine .textBubble::after {
+  right: -11px;
+  border-left-color: #95ec69;
+}
+
+.imageMessage {
+  gap: 18px;
+}
+
+.imageBubble {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f7f9ff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.screenshotTop {
+  width: 236px;
+  height: 116px;
+  background:
+    linear-gradient(90deg, #fdfdfd 0 100%) padding-box,
+    linear-gradient(#ebf1ff, #ebf1ff);
+}
+
+.screenshotTop::before {
+  display: block;
+  width: 100%;
+  height: 46px;
+  border-bottom: 1px solid #eef0f7;
+  background:
+    linear-gradient(90deg, #ffb347 0 10px, transparent 10px 16px, #61a5ff 16px 56px, transparent 56px),
+    linear-gradient(90deg, #4a7ff0 0 82px, #f5f6fb 82px 160px, #4a7ff0 160px 202px),
+    linear-gradient(#ffffff, #ffffff);
+  background-position:
+    10px 10px,
+    45px 15px,
+    0 0;
+  background-repeat: no-repeat;
+  background-size:
+    58px 11px,
+    180px 8px,
+    100% 100%;
+  content: '';
+}
+
+.screenshotTop::after {
+  display: block;
+  width: 87px;
+  height: 52px;
+  margin: 9px 0 0 16px;
+  border-radius: 2px;
+  background:
+    linear-gradient(90deg, #d9e9ff 0 28px, transparent 28px),
+    repeating-linear-gradient(#ffffff 0 5px, #eef3ff 5px 7px);
+  content: '';
+}
+
+.screenshotWide {
+  width: 238px;
+  height: 115px;
+  background:
+    linear-gradient(#0e1727 0 15px, transparent 15px),
+    linear-gradient(90deg, #edf5ff 0 31%, #ffffff 31% 100%);
+}
+
+.screenshotWide::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 35px, rgba(74, 127, 240, 0.09) 35px 36px),
+    repeating-linear-gradient(#6982aa 0 2px, transparent 2px 10px);
+  background-position:
+    0 20px,
+    18px 28px;
+  background-size:
+    100% 78px,
+    47px 54px;
+  content: '';
+}
+
+.composer {
+  display: flex;
+  height: 270px;
+  flex: 0 0 270px;
+  flex-direction: column;
+  border-top: 1px solid #d2d2d2;
+  background: #ededed;
+}
+
+.composerTools {
+  display: flex;
+  height: 55px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.leftTools,
+.rightTools {
+  display: flex;
+  align-items: center;
+}
+
+.leftTools {
+  gap: 7px;
+}
+
+.rightTools {
+  gap: 15px;
+}
+
+.inputArea {
+  flex: 1;
+}
+
+@media (max-width: 1180px) {
+  .mine,
+  .theirs {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 820px) {
+  .composer {
+    height: 180px;
+    flex-basis: 180px;
+  }
+
+  .mine,
+  .theirs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .textBubble {
+    max-width: 360px;
+    white-space: normal;
+  }
+}
