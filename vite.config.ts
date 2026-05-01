@@ -9,8 +9,10 @@ export default defineConfig({
       '@': new URL('./src', import.meta.url).pathname,
       '@assets': new URL('./src/assets', import.meta.url).pathname,
       '@components': new URL('./src/components', import.meta.url).pathname,
+      '@layouts': new URL('./src/layouts', import.meta.url).pathname,
       '@pages': new URL('./src/pages', import.meta.url).pathname,
       '@stores': new URL('./src/stores', import.meta.url).pathname,
+      '@typings': new URL('./src/types', import.meta.url).pathname,
     },
   },
 })
