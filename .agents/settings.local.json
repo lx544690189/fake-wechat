@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm tsc *)",
+      "Bash(pnpm dev *)",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__list_console_messages",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__click",
+      "Skill(git-commit)",
+      "Skill(git-commit:*)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
