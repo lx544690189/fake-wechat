@@ -1,17 +1,11 @@
 import dayjs from 'dayjs'
 import { find } from 'lodash-es'
 import { proxy } from 'valtio'
-import type {
-  AvatarVariant,
-  Conversation,
-  SidebarIcon,
-  SidebarItem,
-  TimelineItem,
-} from '@typings/chat'
+import type { Conversation, TimelineItem } from '@typings/chat'
 
-export type { AvatarVariant, Conversation, SidebarIcon, SidebarItem, TimelineItem }
+export type { Conversation, TimelineItem }
 
-class WechatStore {
+class ChatStore {
   activeConversationId: string | null = 'aunt'
 
   conversationListWidth = 300
@@ -19,19 +13,6 @@ class WechatStore {
   composerHeight = 270
 
   composerText = '你好'
-
-  profileAvatar: AvatarVariant = 'sunset'
-
-  sidebarItems: SidebarItem[] = [
-    { id: 'chat', icon: 'chat', badge: 18 },
-    { id: 'contacts', icon: 'contacts' },
-    { id: 'box', icon: 'box' },
-    { id: 'aperture', icon: 'aperture' },
-    { id: 'butterfly', icon: 'butterfly' },
-    { id: 'spark', icon: 'spark' },
-    { id: 'target', icon: 'target' },
-    { id: 'music', icon: 'music' },
-  ]
 
   conversations: Conversation[] = [
     {
@@ -198,4 +179,4 @@ class WechatStore {
   }
 }
 
-export const wechatStore = proxy(new WechatStore())
+export const chatStore = proxy(new ChatStore())

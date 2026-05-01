@@ -3,7 +3,7 @@ import { useSnapshot } from 'valtio'
 import ChatPanel from './components/ChatPanel'
 import ConversationList from './components/ConversationList'
 import EmptyChat from './components/EmptyChat'
-import { wechatStore } from '@stores/chat'
+import { chatStore } from '@stores/chat'
 
 function createConversationResizeHandler(startWidth: number) {
   return (event: ReactMouseEvent) => {
@@ -17,7 +17,7 @@ function createConversationResizeHandler(startWidth: number) {
     document.body.style.userSelect = 'none'
 
     const handleMouseMove = (moveEvent: MouseEvent) => {
-      wechatStore.setConversationListWidth(startWidth + moveEvent.clientX - startX)
+      chatStore.setConversationListWidth(startWidth + moveEvent.clientX - startX)
     }
 
     const handleMouseUp = () => {
@@ -44,7 +44,7 @@ function createComposerResizeHandler(startHeight: number) {
     document.body.style.userSelect = 'none'
 
     const handleMouseMove = (moveEvent: MouseEvent) => {
-      wechatStore.setComposerHeight(startHeight + startY - moveEvent.clientY)
+      chatStore.setComposerHeight(startHeight + startY - moveEvent.clientY)
     }
 
     const handleMouseUp = () => {
@@ -60,7 +60,7 @@ function createComposerResizeHandler(startHeight: number) {
 }
 
 function ChatPage() {
-  const snapshot = useSnapshot(wechatStore)
+  const snapshot = useSnapshot(chatStore)
 
   return (
     <>
@@ -69,17 +69,17 @@ function ChatPage() {
         conversations={snapshot.conversations}
         width={snapshot.conversationListWidth}
         onResizeStart={createConversationResizeHandler(snapshot.conversationListWidth)}
-        onSelect={wechatStore.setActiveConversation}
+        onSelect={chatStore.setActiveConversation}
       />
 
-      {wechatStore.activeConversation ? (
+      {chatStore.activeConversation ? (
         <ChatPanel
           composerHeight={snapshot.composerHeight}
           composerText={snapshot.composerText}
-          conversation={wechatStore.activeConversation}
-          messages={wechatStore.activeMessages}
+          conversation={chatStore.activeConversation}
+          messages={chatStore.activeMessages}
           onComposerResizeStart={createComposerResizeHandler(snapshot.composerHeight)}
-          onComposerTextChange={wechatStore.setComposerText}
+          onComposerTextChange={chatStore.setComposerText}
         />
       ) : (
         <EmptyChat />

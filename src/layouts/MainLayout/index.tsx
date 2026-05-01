@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import { useSnapshot } from 'valtio'
 import Sidebar from './components/Sidebar'
-import { wechatStore } from '@stores/chat'
+import { globalStore } from '@stores/global'
 import styles from './index.module.less'
 
 function MainLayout() {
-  const snapshot = useSnapshot(wechatStore)
+  const snapshot = useSnapshot(globalStore)
 
   return (
     <main className={styles.layout}>
