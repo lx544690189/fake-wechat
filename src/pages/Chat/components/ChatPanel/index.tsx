@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import type { CSSProperties, MouseEventHandler } from 'react'
 import Avatar from '@components/Avatar'
 import ToolbarButton from '@components/ToolbarButton'
-import type { Conversation, TimelineItem } from '@stores/wechat'
+import type { Conversation, TimelineItem } from '@typings/chat'
 import styles from './index.module.less'
 
 type ChatPanelProps = {

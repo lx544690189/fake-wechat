@@ -3,7 +3,7 @@ import type { CSSProperties, MouseEventHandler } from 'react'
 import Avatar from '@components/Avatar'
 import Icon from '@components/Icon'
 import ToolbarButton from '@components/ToolbarButton'
-import type { Conversation } from '@stores/wechat'
+import type { Conversation } from '@typings/chat'
 import styles from './index.module.less'
 
 type ConversationListProps = {

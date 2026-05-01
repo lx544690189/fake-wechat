@@ -1,68 +1,17 @@
 import dayjs from 'dayjs'
 import { find } from 'lodash-es'
 import { proxy } from 'valtio'
+import type {
+  AvatarVariant,
+  Conversation,
+  SidebarIcon,
+  SidebarItem,
+  TimelineItem,
+} from '@typings/chat'
 
-export type AvatarVariant =
-  | 'sunset'
-  | 'aunt'
-  | 'file'
-  | 'service'
-  | 'groupBlue'
-  | 'public'
-  | 'groupWarm'
-  | 'pay'
-  | 'orange'
-
-export type SidebarIcon =
-  | 'chat'
-  | 'contacts'
-  | 'box'
-  | 'aperture'
-  | 'butterfly'
-  | 'spark'
-  | 'target'
-  | 'music'
-  | 'phone'
-  | 'menu'
-
-export type Conversation = {
-  id: string
-  title: string
-  avatar: AvatarVariant
-  preview: string
-  time: string
-  muted?: boolean
-  unread?: number
-  redDot?: boolean
-  marker?: 'bubble'
-  mention?: string
-}
-
-export type ChatMessage = {
-  id: string
-  author: 'me' | 'them'
-  type: 'text' | 'image'
-  content?: string
-  imageKind?: 'screenshotTop' | 'screenshotWide'
-}
-
-export type TimelineItem =
-  | {
-      id: string
-      type: 'time'
-      label: string
-    }
-  | ChatMessage
-
-export type SidebarItem = {
-  id: SidebarIcon
-  icon: SidebarIcon
-  badge?: number
-}
+export type { AvatarVariant, Conversation, SidebarIcon, SidebarItem, TimelineItem }
 
 class WechatStore {
-  activeNav: SidebarIcon = 'chat'
-
   activeConversationId: string | null = 'aunt'
 
   conversationListWidth = 300
@@ -234,10 +183,6 @@ class WechatStore {
 
   setActiveConversation = (conversationId: string | null) => {
     this.activeConversationId = conversationId
-  }
-
-  setActiveNav = (nav: SidebarIcon) => {
-    this.activeNav = nav
   }
 
   setConversationListWidth = (width: number) => {
