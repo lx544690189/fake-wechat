@@ -15,6 +15,7 @@ function ToolbarButton({ icon, label, active, badge, muted, onClick }: ToolbarBu
   return (
     <button
       aria-label={label}
+      aria-pressed={active}
       className={classNames(styles.button, styles[icon], {
         [styles.active]: active,
         [styles.muted]: muted,

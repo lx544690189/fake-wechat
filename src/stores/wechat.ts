@@ -65,6 +65,12 @@ class WechatStore {
 
   activeConversationId: string | null = 'aunt'
 
+  conversationListWidth = 300
+
+  composerHeight = 270
+
+  composerText = '你好'
+
   profileAvatar: AvatarVariant = 'sunset'
 
   sidebarItems: SidebarItem[] = [
@@ -232,6 +238,18 @@ class WechatStore {
 
   setActiveNav = (nav: SidebarIcon) => {
     this.activeNav = nav
+  }
+
+  setConversationListWidth = (width: number) => {
+    this.conversationListWidth = Math.min(Math.max(width, 260), 520)
+  }
+
+  setComposerHeight = (height: number) => {
+    this.composerHeight = Math.min(Math.max(height, 150), 420)
+  }
+
+  setComposerText = (text: string) => {
+    this.composerText = text
   }
 }
 

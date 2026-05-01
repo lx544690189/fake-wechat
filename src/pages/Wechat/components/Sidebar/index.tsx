@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import Avatar from '../../../../components/Avatar'
 import ToolbarButton from '../../../../components/ToolbarButton'
 import type { AvatarVariant, SidebarIcon, SidebarItem } from '../../../../stores/wechat'
@@ -14,14 +13,9 @@ type SidebarProps = {
 function Sidebar({ avatar, activeNav, items, onNavSelect }: SidebarProps) {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.trafficLights} aria-hidden="true">
-        <span className={classNames(styles.light, styles.close)} />
-        <span className={classNames(styles.light, styles.minimize)} />
-        <span className={classNames(styles.light, styles.zoom)} />
-      </div>
 
       <div className={styles.avatarSlot}>
-        <Avatar variant={avatar} size={48} />
+        <Avatar variant={avatar} size={38} />
       </div>
 
       <nav className={styles.nav}>

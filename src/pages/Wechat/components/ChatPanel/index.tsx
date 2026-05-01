@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import type { CSSProperties, MouseEventHandler } from 'react'
 import Avatar from '../../../../components/Avatar'
 import ToolbarButton from '../../../../components/ToolbarButton'
 import type { Conversation, TimelineItem } from '../../../../stores/wechat'
@@ -7,11 +8,25 @@ import styles from './index.module.less'
 type ChatPanelProps = {
   conversation: Conversation
   messages: readonly TimelineItem[]
+  composerHeight: number
+  composerText: string
+  onComposerTextChange: (text: string) => void
+  onComposerResizeStart: MouseEventHandler<HTMLDivElement>
 }
 
-function ChatPanel({ conversation, messages }: ChatPanelProps) {
+function ChatPanel({
+  conversation,
+  messages,
+  composerHeight,
+  composerText,
+  onComposerTextChange,
+  onComposerResizeStart,
+}: ChatPanelProps) {
   return (
-    <section className={styles.chat}>
+    <section
+      className={styles.chat}
+      style={{ '--composer-height': `${composerHeight}px` } as CSSProperties}
+    >
       <header className={styles.header}>
         <h1>{conversation.title}</h1>
         <div className={styles.headerActions}>
@@ -22,7 +37,6 @@ function ChatPanel({ conversation, messages }: ChatPanelProps) {
       </header>
 
       <div className={styles.timeline}>
-        <div className={styles.scrollbar} />
         {messages.map((item) => {
           if (item.type === 'time') {
             return (
@@ -57,6 +71,13 @@ function ChatPanel({ conversation, messages }: ChatPanelProps) {
       </div>
 
       <footer className={styles.composer}>
+        <div
+          aria-label="调整输入框高度"
+          className={styles.composerResizeHandle}
+          role="separator"
+          tabIndex={0}
+          onMouseDown={onComposerResizeStart}
+        />
         <div className={styles.composerTools}>
           <div className={styles.leftTools}>
             <ToolbarButton icon="smile" label="表情" />
@@ -71,7 +92,14 @@ function ChatPanel({ conversation, messages }: ChatPanelProps) {
             <ToolbarButton icon="video" label="视频通话" />
           </div>
         </div>
-        <div className={styles.inputArea} />
+        <textarea
+          aria-label="输入消息"
+          className={styles.inputArea}
+          defaultValue={composerText}
+          id="wechat-composer-input"
+          name="message"
+          onInput={(event) => onComposerTextChange(event.currentTarget.value)}
+        />
       </footer>
     </section>
   )
