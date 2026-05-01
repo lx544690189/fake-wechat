@@ -11,12 +11,14 @@
 ## 项目目录
 
 - `src`
-  - `App`：应用入口组件，负责挂载页面
   - `assets`：静态资源
   - `components`：公共组件
+  - `layouts`：布局组件
   - `pages`：页面级模块
+    - `Chat`：聊天页面
+    - `ComingSoon`：功能开发中页面
   - `stores`：全局或页面共享状态
-  - `main.tsx`：React 应用启动入口
+  - `main.tsx`：React 应用启动入口，包含路由配置
   - `index.less`：全局样式
 
 ## 代码规范
