@@ -4,7 +4,7 @@ import ChatPanel from './components/ChatPanel'
 import ConversationList from './components/ConversationList'
 import EmptyChat from './components/EmptyChat'
 import Sidebar from './components/Sidebar'
-import { wechatStore } from '../../stores/wechat'
+import { wechatStore } from '@stores/wechat'
 import styles from './index.module.less'
 
 function createConversationResizeHandler(startWidth: number) {

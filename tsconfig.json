@@ -8,6 +8,13 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@stores/*": ["./src/stores/*"]
+    },
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,

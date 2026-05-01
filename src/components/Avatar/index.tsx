@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import type { CSSProperties } from 'react'
-import type { AvatarVariant } from '../../stores/wechat'
+import type { AvatarVariant } from '@stores/wechat'
 import styles from './index.module.less'
 
 type AvatarProps = {

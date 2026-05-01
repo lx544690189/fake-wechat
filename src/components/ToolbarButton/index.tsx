@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import Icon, { type IconName } from '../Icon'
+import Icon, { type IconName } from '@components/Icon'
 import styles from './index.module.less'
 
 type ToolbarIconName = Exclude<IconName, 'bellOff' | 'miniBubble'>

@@ -1,149 +1,49 @@
+import aperture from '@assets/icons/aperture.svg?raw'
+import bellOff from '@assets/icons/bell-off.svg?raw'
+import box from '@assets/icons/box.svg?raw'
+import butterfly from '@assets/icons/butterfly.svg?raw'
+import chat from '@assets/icons/chat.svg?raw'
+import chevron from '@assets/icons/chevron.svg?raw'
+import contacts from '@assets/icons/contacts.svg?raw'
+import folder from '@assets/icons/folder.svg?raw'
+import menu from '@assets/icons/menu.svg?raw'
+import mic from '@assets/icons/mic.svg?raw'
+import miniBubble from '@assets/icons/mini-bubble.svg?raw'
+import more from '@assets/icons/more.svg?raw'
+import music from '@assets/icons/music.svg?raw'
+import phoneCall from '@assets/icons/phone-call.svg?raw'
+import phone from '@assets/icons/phone.svg?raw'
+import plus from '@assets/icons/plus.svg?raw'
+import scissors from '@assets/icons/scissors.svg?raw'
+import search from '@assets/icons/search.svg?raw'
+import smile from '@assets/icons/smile.svg?raw'
+import spark from '@assets/icons/spark.svg?raw'
+import target from '@assets/icons/target.svg?raw'
+import video from '@assets/icons/video.svg?raw'
+
 const icons = {
-  chat: (
-    <>
-      <path
-        d="M9.2 5.5c-3.3 0-6 2.15-6 4.82 0 1.43.78 2.74 2.02 3.63l-.38 2.02c-.05.27.23.5.48.39l2.22-1.03c.53.13 1.08.19 1.66.19 3.31 0 6-2.15 6-4.81S12.51 5.5 9.2 5.5Z"
-        fill="currentColor"
-        stroke="none"
-      />
-      <path
-        d="M14.2 9.15c3.34.02 6 2.13 6 4.73 0 1.35-.69 2.56-1.8 3.43l.3 1.66c.06.29-.25.51-.51.38l-1.78-.9c-.62.18-1.3.27-2.01.27-2.64 0-4.88-1.35-5.68-3.23.2.02.41.03.63.03 3.83 0 6.94-2.41 6.94-5.37 0-.32-.03-.63-.09-.93-.62-.07-1.28-.07-2-.07Z"
-        fill="currentColor"
-        opacity="0.62"
-        stroke="none"
-      />
-    </>
-  ),
-  contacts: (
-    <>
-      <path d="M8.4 11.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" />
-      <path d="M2.9 19.3c.6-3.4 2.5-5.1 5.5-5.1 2.15 0 3.77.86 4.7 2.58" />
-      <path d="M15.2 7.15h5.45M15.2 11.9h5.45M16.65 16.65h4" />
-    </>
-  ),
-  box: (
-    <>
-      <path d="m12 2.9 8 4.45v9.3l-8 4.45-8-4.45v-9.3L12 2.9Z" />
-      <path d="m4.35 7.55 7.65 4.28 7.65-4.28M12 21.1v-9.27" />
-      <path d="m8.05 5.2 7.84 4.37" opacity="0.7" />
-    </>
-  ),
-  aperture: (
-    <>
-      <circle cx="12" cy="12" r="9.25" />
-      <path d="M12.25 2.9 9.35 8.05M19.95 7.25l-5.9.03M19.72 16.92l-3.02-5.06M11.78 21.1l2.9-5.16M4.05 16.74l5.9-.02M4.27 7.08l3.04 5.04" />
-    </>
-  ),
-  butterfly: (
-    <>
-      <path d="M11.25 12.45C8.7 7.65 6.25 4.15 4.35 4.75 2.56 5.31 3.13 9.18 5.02 11.1c1.51 1.54 3.86 1.67 6.23 1.35Z" />
-      <path d="M12.75 12.45c2.55-4.8 5-8.3 6.9-7.7 1.79.56 1.22 4.43-.67 6.35-1.51 1.54-3.86 1.67-6.23 1.35Z" />
-      <path d="M11.2 12.55c-3.15.73-5.1 2.24-4.34 4.19.9 2.28 3.7 2.13 4.98-2.62M12.8 12.55c3.15.73 5.1 2.24 4.34 4.19-.9 2.28-3.7 2.13-4.98-2.62" />
-    </>
-  ),
-  spark: (
-    <>
-      <path d="M12 2.9v5.4M12 15.7v5.4M2.9 12h5.4M15.7 12h5.4" />
-      <path d="m5.56 5.56 3.83 3.83M14.61 14.61l3.83 3.83M18.44 5.56l-3.83 3.83M9.39 14.61l-3.83 3.83" opacity="0.74" />
-    </>
-  ),
-  target: (
-    <>
-      <path d="m12 3.1 8.9 8.9-8.9 8.9L3.1 12 12 3.1Z" />
-      <circle cx="12" cy="12" r="3.05" />
-      <path d="M12 8.95V6.8M15.05 12h2.15M12 15.05v2.15M8.95 12H6.8" />
-    </>
-  ),
-  music: (
-    <>
-      <circle cx="12" cy="12" r="8.95" />
-      <path d="M14.95 7.25v7.45a2.25 2.25 0 1 1-1.35-2.06V8.9l-5.15 1.15v5.65a2.25 2.25 0 1 1-1.35-2.06V8.85l7.85-1.6Z" />
-    </>
-  ),
-  phone: (
-    <>
-      <rect width="11.2" height="18.2" x="6.4" y="2.9" rx="1.8" />
-      <path d="M10.25 18.25h3.5" />
-    </>
-  ),
-  menu: (
-    <>
-      <path d="M4 7h16M4 12h16M4 17h16" />
-    </>
-  ),
-  search: (
-    <>
-      <circle cx="10.75" cy="10.75" r="5.85" />
-      <path d="m15.25 15.25 4.55 4.55" />
-    </>
-  ),
-  plus: (
-    <>
-      <path d="M12 4.4v15.2M4.4 12h15.2" />
-    </>
-  ),
-  smile: (
-    <>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M8.6 9.55h.01M15.4 9.55h.01" strokeWidth="2.6" />
-      <path d="M8.25 14.15c.82 1.45 2.1 2.18 3.75 2.18s2.93-.73 3.75-2.18" />
-    </>
-  ),
-  folder: (
-    <>
-      <path d="M3.2 6.95h6.75l1.75 2.05h9.1v8.75c0 1.05-.55 1.6-1.6 1.6H4.8c-1.05 0-1.6-.55-1.6-1.6V6.95Z" />
-      <path d="M3.2 9h18" />
-    </>
-  ),
-  scissors: (
-    <>
-      <circle cx="6.35" cy="6.6" r="2.65" />
-      <circle cx="6.35" cy="17.4" r="2.65" />
-      <path d="m8.65 8.02 11.1 8.33M8.65 15.98l11.1-8.33M12.2 12h.02" />
-    </>
-  ),
-  mic: (
-    <>
-      <rect width="7.4" height="11.4" x="8.3" y="3.05" rx="3.7" />
-      <path d="M5.6 11.2c0 3.55 2.52 5.9 6.4 5.9s6.4-2.35 6.4-5.9M12 17.1v3.8M8.9 20.9h6.2" />
-    </>
-  ),
-  phoneCall: (
-    <>
-      <path d="M8.55 4.25 6.1 5.65c-.88.5-1.2 1.58-.76 2.48 2.12 4.36 5.36 7.61 9.76 9.76.9.44 1.98.12 2.48-.76l1.38-2.43-4-2.36-1.37 1.74c-1.63-.82-2.84-2.02-3.66-3.66l1.72-1.37-2.34-4.01-.76-.79Z" />
-      <path d="M16.5 5.1h3.55v3.05l-3.55-1.23V5.1ZM13.7 4.85h2.8v3.55h-2.8z" />
-    </>
-  ),
-  video: (
-    <>
-      <rect width="12.6" height="9.8" x="3.35" y="7.1" rx="1.7" />
-      <path d="m15.95 10.15 4.7-2.75v9.2l-4.7-2.75" />
-    </>
-  ),
-  more: (
-    <>
-      <path d="M5.5 12h.01M12 12h.01M18.5 12h.01" strokeWidth="3" />
-    </>
-  ),
-  chevron: (
-    <>
-      <path d="m7.25 9.1 4.75 4.75 4.75-4.75" />
-    </>
-  ),
-  bellOff: (
-    <>
-      <path d="m4.1 4.1 15.8 15.8" />
-      <path d="M9.4 19.05h5.2" />
-      <path d="M6.8 13.15V10.6a5.18 5.18 0 0 1 1.57-3.72M11.1 5.5c.3-.06.6-.09.9-.09 2.86 0 5.2 2.33 5.2 5.19v3.83l1.45 2.18H9.32" />
-      <path d="M12 3.5v1.9" />
-    </>
-  ),
-  miniBubble: (
-    <>
-      <path d="M11.2 5.05c-4.12 0-7.45 2.62-7.45 5.85s3.33 5.85 7.45 5.85c.83 0 1.63-.1 2.38-.31l2.96 1.48-.52-2.53c1.62-1.07 2.63-2.67 2.63-4.49 0-3.23-3.33-5.85-7.45-5.85Z" stroke="#168fff" />
-      <circle cx="18.2" cy="17.1" r="2.7" fill="#ffcf33" stroke="#ffcf33" />
-    </>
-  ),
+  aperture,
+  bellOff,
+  box,
+  butterfly,
+  chat,
+  chevron,
+  contacts,
+  folder,
+  menu,
+  mic,
+  miniBubble,
+  more,
+  music,
+  phone,
+  phoneCall,
+  plus,
+  scissors,
+  search,
+  smile,
+  spark,
+  target,
+  video,
 } as const
 
 export type IconName = keyof typeof icons
@@ -155,19 +55,11 @@ type IconProps = {
 
 function Icon({ name, className }: IconProps) {
   return (
-    <svg
+    <span
       aria-hidden="true"
       className={className}
-      fill="none"
-      focusable="false"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="1.65"
-      viewBox="0 0 24 24"
-    >
-      {icons[name]}
-    </svg>
+      dangerouslySetInnerHTML={{ __html: icons[name] }}
+    />
   )
 }
 

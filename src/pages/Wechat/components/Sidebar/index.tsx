@@ -1,6 +1,6 @@
-import Avatar from '../../../../components/Avatar'
-import ToolbarButton from '../../../../components/ToolbarButton'
-import type { AvatarVariant, SidebarIcon, SidebarItem } from '../../../../stores/wechat'
+import Avatar from '@components/Avatar'
+import ToolbarButton from '@components/ToolbarButton'
+import type { AvatarVariant, SidebarIcon, SidebarItem } from '@stores/wechat'
 import styles from './index.module.less'
 
 type SidebarProps = {
